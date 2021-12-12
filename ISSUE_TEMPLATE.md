@@ -5,7 +5,6 @@
 [//]: # ([NPC] Magistrix Erona)
 [//]: # ([Spell][Mage] Fireball)
 [//]: # ([Npc][Drop] Ghostclaw Lynx)
-[//]: # (To find server revision type `.server info` command in the game chat.)
 
 **Description**: 
 
