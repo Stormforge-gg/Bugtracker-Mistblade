@@ -23,7 +23,7 @@ Additional Information
 |-------------------|:----------------------------------------------------------|
 | Website:          | https://stormforge.gg/                                    |
 | Discord:          | https://discord.gg/stormforge                             |
-| Realmlist:        | login.stormforge.gg or play.stormforge.gg                 |
+| Realmlist:        | logon.stormforge.gg or play.stormforge.gg                 |
 | MOP Client:       | https://launcherdata.tauri.hu/torrent/WoW_548.torrent     |
 
 How to connect?
