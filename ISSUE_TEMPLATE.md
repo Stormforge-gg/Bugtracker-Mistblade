@@ -7,6 +7,8 @@
 [//]: # ([Spell][Mage] Fireball)
 [//]: # ([Npc][Drop] Ghostclaw Lynx)
 
+**Realm where you noticed the issue**:
+
 **Description**: 
 
 **Current behaviour**:
