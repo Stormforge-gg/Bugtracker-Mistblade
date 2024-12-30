@@ -1,0 +1,14 @@
+---
+
+blank_issues_enabled: true
+
+contact_links:
+  - name: Visit our Forum
+    url: https://forum.stormforge.gg
+    about: Check our forum for guides, announcements and discuss various topics with other players.
+
+  - name: Join our Discord Community
+    url: https://discord.gg/stormforge
+    about: Join our Discord community to get help, share your ideas, and chat with other players.
+
+...

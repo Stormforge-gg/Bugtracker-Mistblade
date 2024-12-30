@@ -1,0 +1,93 @@
+name: Issue Labeler
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  label-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const body = issue.body;
+            
+            const realmMatch = body.match(/### Realm\s*\n\n(.+?)(?=\n\n)/s);
+            const categoryMatch = body.match(/### Category\s*\n\n(.+?)(?=\n\n)/s);
+            
+            const realm = realmMatch ? realmMatch[1].trim() : null;
+            const category = categoryMatch ? categoryMatch[1].trim() : null;
+            
+            const realmColors = {
+              'mistblade': 'ff6b6b',
+              'sheilun': '4dabf7'
+            };
+            
+            const categoryColors = {
+              'Quest': '94d82d',      
+              'NPC/Creature': 'ffd43b',  
+              'Spell/Ability': 'ae3ec9',
+              'Item/Loot': 'fd7e14', 
+              'Class Mechanics': '1098ad',
+              'Profession': '8758FF',
+              'Instance/Raid': 'e64980',
+              'PvP': 'c92a2a', 
+              'Visual/Graphics': '868e96',
+              'Other': '495057'
+            };
+            
+            if (realm) {
+              const realmLabel = `realm: ${realm.toLowerCase()}`;
+              try {
+                await github.rest.issues.getLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: realmLabel
+                });
+              } catch (e) {
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: realmLabel,
+                  color: realmColors[realm.toLowerCase()]
+                });
+              }
+            }
+            
+            if (category) {
+              const categoryLabel = `type: ${category.toLowerCase()}`;
+              try {
+                await github.rest.issues.getLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: categoryLabel
+                });
+              } catch (e) {
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: categoryLabel,
+                  color: categoryColors[category]
+                });
+              }
+            }
+            
+            const labels = [];
+            
+            if (realm) {
+              labels.push(`realm: ${realm.toLowerCase()}`);
+            }
+            
+            if (category) {
+              labels.push(`type: ${category.toLowerCase()}`);
+            }
+            
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              labels: labels
+            });
