@@ -1,4 +1,4 @@
-Mistblade realm (5.4.8)
+Mistblade and Sheilun realms (5.0.0 - 5.4.8)
 ================================
 
 How to use the bugtracker?
@@ -24,10 +24,8 @@ Additional Information
 | Website:          | https://stormforge.gg/                                    |
 | Discord:          | https://discord.gg/stormforge                             |
 | Realmlist:        | logon.stormforge.gg or play.stormforge.gg                 |
-| MOP Client:       | https://launcherdata.tauri.hu/torrent/WoW_548.torrent     |
+| MOP Client:       | https://stormforge.gg/en/how-to-play                      |
 
 How to connect?
 -------------------------
-- Download client from https://launcherdata.tauri.hu/torrent/WoW_548.torrent
-- Edit file wtf/config.wtf
-- Set `SET realmlist XXX` on SET realmlist `logon.stormforge.gg`
+- Download client from https://stormforge.gg/en/how-to-play
