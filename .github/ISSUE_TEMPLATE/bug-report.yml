@@ -1,0 +1,118 @@
+---
+name: 🐞 Bug Report
+description: Report a game issue to help improve the server
+
+assignees:
+  - query-wow
+  - Cold-Martijn
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐞 Bug Report
+        Thanks for taking the time to report an issue! Please fill out this form as completely as possible.
+        
+        Before submitting, please check if a similar issue already exists.
+
+  - type: dropdown
+    id: realm
+    attributes:
+      label: Realm
+      description: Which realm did you encounter this issue on?
+      options:
+        - Mistblade
+        - Sheilun
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What type of issue are you reporting?
+      options:
+        - Quest
+        - NPC/Creature
+        - Spell/Ability
+        - Item/Loot
+        - Class Mechanics
+        - Profession
+        - Instance/Raid
+        - PvP
+        - Visual/Graphics
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Where did this issue occur? (Zone, coordinates, instance name etc.)
+      placeholder: "e.g. Jade Forest [45.2, 32.8]"
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: Please provide a clear and detailed description of what the bug is.
+      placeholder: Explain what exactly is not working as expected...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        Please provide step-by-step instructions that reproduce the issue:
+        1. Go to...
+        2. Click on...
+        3. Use spell...
+        4. See error
+      placeholder: Detailed steps to reproduce the bug...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behaviour
+    attributes:
+      label: Expected behaviour
+      description: What should happen instead?
+      placeholder: Describe how it should work according to game mechanics...
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots/Videos
+      description: |
+        If applicable, add screenshots or videos to better illustrate the issue.
+        You can use links from http://wowhead.com or https://mop-shoot.tauri.hu/
+      placeholder: Upload files or paste links here...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Include any other context about the problem here (addons used, time of occurrence etc.)
+      placeholder: Any additional information that could help us resolve the issue...
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        📛 Before submitting, please check if a similar bug report already exists.
+        
+        Join our community:
+        - [Stormforge Forum](https://forum.stormforge.gg/)
+        - [Stormforge Discord](https://discord.gg/stormforge)
+
+...
