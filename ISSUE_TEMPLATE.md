@@ -6,6 +6,8 @@
 [//]: # ([NPC] Magistrix Erona)
 [//]: # ([Spell][Mage] Fireball)
 [//]: # ([Npc][Drop] Ghostclaw Lynx)
+[//]: # (WE DO NOT IMPLEMENT CLASSIC MOP FEATURES!)
+
 
 **Realm where you noticed the issue**:
 
@@ -14,3 +16,4 @@
 **Current behaviour**:
 
 **Expected behaviour**: 
+ 
